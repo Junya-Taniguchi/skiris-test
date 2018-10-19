@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<br/>
+<h2>アヤメの品種を調べることができます。</h2>
+<p>scikit-learnに付属しているデータセットを使ってアヤメの品種の分類ができます。以下の４つのフォームに数値を入れるてください。</p>
+<form action="{% url 'answer'%}">
+  <div class="form-group">
+    <input class="form-control" type="number" placeholder="sepal length（4~7.9cm)" name="sepallength" size="20" max="7.9" min="4" step="0.1">
+    <br />
+    <input class="form-control" type="number" placeholder="sepal width（2~4.4cm)" name="sepalwidth" size="20" max="4.4" min="2" step="0.1">
+    <br />
+    <input class="form-control" type="number" placeholder="petal length（1~6.9cm）" name="petallength" size="20" max="6.9" min="1" step="0.1">
+    <br />
+    <input class="form-control" type="number" placeholder="petal width（0.1~2.5cm）" name="petalwidth" size="20" max="2.5" min="0.1" step="0.1">
+    <br />
+    <input class="btn btn-primary" type="submit" value="check!" />
+  </div>
+</form>
+
+{% endblock %}
